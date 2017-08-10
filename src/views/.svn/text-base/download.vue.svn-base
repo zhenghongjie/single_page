@@ -1,0 +1,37 @@
+<template>
+	<div id="download">
+		<img src="../img/download-logo.png" alt="" class="app" />
+		<div class="download-button">
+			<a href="https://itunes.apple.com/cn/app/id1120904609">
+				<img src="../img/ios.jpg">
+			</a>
+			<a href="http://test.miaocang.cc/style/h5/download.html" class="andro">
+				<img src="../img/android.jpg">
+			</a>
+		</div>
+	</div>
+
+</template>
+
+<script>
+	export default {
+		name: 'download',
+	}
+</script>
+<style scoped>
+	#download .app {
+		width: 100%;
+		height: auto;
+	}
+	
+	.download-button {
+		width: 75%;
+		margin: 0 auto;
+		margin-top:60px;
+	}
+	
+	.andro {
+		display: inline-block;
+		margin-top: 20px;
+	}
+</style>

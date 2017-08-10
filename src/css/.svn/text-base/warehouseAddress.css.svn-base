@@ -1,0 +1,74 @@
+@import 'common.css';
+header {
+    height: 45px;
+    width: 100%;
+    background: #33be85;
+    text-align: center;
+    color: #fff;
+}
+header p {
+    font-size: .48rem;
+    line-height: 45px;
+    height: 100%;
+}
+#address ul, #map ul {
+    border-top: .267rem solid #f0eff5;
+}
+#address ul li, #map ul li {
+    padding-top: .32rem;
+    padding-bottom: .32rem;
+    margin-left: .533rem;
+    font-size: .4rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+#address ul li span, #map ul li span {
+    display: inline-block;
+    width: 25%;
+    color: #b8b8b8;
+}
+#address ul li em, #map ul li em {
+    display: inline-block;
+    width: 70%;
+    color: #333;
+}
+#map-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    background-color: rgb(243, 241, 236);
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+#address footer, #map footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 2222;
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #e5e5e5;
+    background: #fff;
+}
+#address footer a, #map footer a {
+    display: inline-block;
+    background: #00ae66;
+    line-height: 40px;
+    text-align: center;
+    width: 94%;
+    margin: 10px 3%;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+#address ul div, #map ul div {
+    width: 100%;
+    height: .267rem;
+    background: #f0eff5;
+}
+#map{	
+	width: 100%;
+	height: 250px;
+}

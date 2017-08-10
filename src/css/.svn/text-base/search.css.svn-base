@@ -1,0 +1,81 @@
+@import 'common.css';
+#search {
+    background: #f0eff5 !important;
+    height: 1000px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    min-height: 1000px;
+}
+#search header {
+    background: #00ae66;
+    padding: 0!important;
+   
+}
+.search-group {
+    margin-left: 12px;
+    background: #008b52;
+    height: 30px;
+    border-radius: 5px;
+    float: left;
+    width: 79%;
+    margin-top: 8px;
+}
+.styled-select {
+    min-width: 57px;
+}
+select {
+    border: none;
+    outline: none;
+}
+.search-group input {
+    height: 30px;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 13px;
+    float: left;
+}
+#search header .btn {
+    background: none;
+    color: #fff;
+    font-size: 13px;
+    float: right;
+    height: 100%;
+    line-height: 100%;
+    margin-right: 14px;
+}
+.search-title {
+    color: #999;
+    text-align: left;
+    line-height: 45px;
+    font-size: .32rem;
+}
+#search section ul {
+    padding-left: 10px;
+    background: #fff;
+}
+li:last-child {
+    border: none;
+}
+.search-group i {
+    float: left;
+    width: 15px;
+    margin-left: 15px;
+    height: 15px;
+    margin-top: 7px;
+    background: url('../img/search.png') no-repeat;
+    background-size: cover;
+    display: inline-block;
+    float: left;
+}
+.search-group input {
+    width: 160px;
+    float: left;
+}
+.search-group select {
+    color: #80ddb5;
+    font-size: 13px;
+}
+#search section li {margin-left: 10px}

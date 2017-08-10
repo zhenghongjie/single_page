@@ -1,0 +1,83 @@
+
+* {
+	padding: 0;
+	margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-style: normal;
+    &::before,
+    &::after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+body,html,#app,.container,#app>div{
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 640px;
+    -webkit-overflow-scrolling: touch;
+    background: white;
+    font-size: 12px;
+    font-family: Helvetica, STHeiti STXihei, Microsoft JhengHei, Microsoft YaHei, Arial;
+    line-height: 1.5;
+    color: #666;
+    -webkit-text-size-adjust: 100% !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+}
+h1,h2,h3,h4,h5,h6{
+  font-style: normal;
+}
+a{
+	text-decoration:none;
+    color: #666;
+
+}
+
+i,strong,em{
+	font-style: normal;
+}
+img {
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+button,input,select{
+    border:none;
+    background: none;
+    outline: none;
+}
+::-webkit-input-placeholder {
+    color: #cacaca;
+    font-size: .427rem;
+ 
+}
+li {
+    list-style: none;
+}
+.clear{
+  clear: both;
+}
+
+.float_menu{
+	    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 16%;
+    right: 3%;
+    z-index: 999;
+    background-size: 100% 100%;
+	
+}

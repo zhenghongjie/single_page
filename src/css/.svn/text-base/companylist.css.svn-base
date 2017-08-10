@@ -1,0 +1,134 @@
+/*@import 'common.css';*/
+
+#businessList header {
+	padding: 8px 10px 10px;
+	background: #00ae66;
+	height: 45px;
+}
+
+
+#businessList h4 {
+	padding: 0 10px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	overflow: hidden;
+	color: #999;
+	font-size: 12px;
+}
+
+#businessList .businessItem {
+	padding: 0 12px;
+	background: #fff;
+}
+
+#businessList .businessItem li {
+	border-top: 1px solid #eee;
+	height: 95px;
+}
+
+#businessList .goodsDetail {
+	float: left;
+	margin-top: 12px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+#businessList .goodsDetail img {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	margin-right: 5px;
+}
+
+#businessList .detail_companylist {
+	overflow: hidden;
+	max-height: 70%;
+}
+
+#businessList .detail_companylist h3 {
+	color: #333;
+	margin-bottom: .133rem;
+}
+
+#businessList .detail_companylist .address {
+	display: inline-block;
+	color: #999;
+	margin-right: .4rem;
+}
+
+#businessList .businessItem li button {
+	width: 54px;
+	height: 28px;
+	line-height: 23px;
+	text-align: center;
+	background: #fff;
+	border-radius: 3px;
+	color: #00ae66;
+	font-size: 11px;
+	float: right;
+	margin-top: 32px;
+	border: 1px solid #00ae66;
+}
+
+#businessList i {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.weui_mask {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .6);
+}
+
+.weui_dialog {
+	width: 35%;
+	position: fixed;
+	z-index: 13;
+	width: 85%;
+	top: 50%;
+	left: 50%;
+	background-color: #fafafc;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#businessList .has_auth {
+	width: .44rem;
+	height: .44rem;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.has_auth_img {
+	max-width: 100% !important;
+	height: 100% !important;
+}
+
+#search-group {
+	position: relative;
+}
+
+.companylist_input {
+	position: absolute;
+	left: 14%
+}
+
+.over_span {
+	color: #333;
+	display: inline-block;
+	max-width: 4.5rem;
+	overflow: hidden;
+	line-height: .44rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: middle;
+}

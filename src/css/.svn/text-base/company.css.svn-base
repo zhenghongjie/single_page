@@ -1,0 +1,358 @@
+@import 'common.css';
+.company-header-box {
+	position: relative;
+	z-index: 1;
+	left: 0;
+	height: 150px;
+	background-image: url(../img/comp_background.jpg);
+}
+
+.navigation {
+	height: 44px;
+	width: 100%;
+	background: transparent;
+	position: absolute;
+	top: 0;
+}
+
+.navigation .home {
+	color: #fff;
+	font-size: 15px;
+	display: inline-block;
+	padding: 12px 15px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.navigation i {
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	background-size: contain;
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+.search-icon {
+	width: 40px;
+	height: 44px;
+	padding: 0 15px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.search-icon i {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	position: absolute;
+	left: 10px;
+	top: 12px;
+}
+
+.pic-header {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: transparent;
+	color: #fff
+}
+
+.logo-show {
+	width: 66px;
+	height: 66px !important;
+	display: block;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	bottom: 20px;
+}
+
+.logo-show .auth {
+	width: 16px;
+	height: 16px;
+	display: block;
+	background: #ffb501;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.pic-header p {
+	font-size: 18px;
+	color: #fff;
+	padding: 10px 15px 10px 100px;
+}
+
+.fans-content {
+	height: 40px;
+	width: 100%;
+	padding-left: 100px;
+	padding-right: 15px;
+	background: hsla(0, 0%, 100%, .3);
+	font-size: .373rem;
+	line-height: 40px;
+}
+
+.fans {
+	color: #fff;
+	font-size: 13px;
+	display: inline-block;
+	float: left !important;
+}
+
+.fans em {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	padding-right: 3px;
+}
+
+.love-btn {
+	float: right;
+	width: 70px;
+	height: 28px;
+	background-color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 14px;
+	color: #00ae66;
+	line-height: 28px;
+	font-family: Microsoft YaHei, \\5FAE\8F6F\96C5\9ED1;
+	letter-spacing: 2px;
+	text-indent: 2px;
+	margin-top: 6px;
+}
+
+.seedling_number-nest {
+	width: 100%;
+	height: 45px;
+	background-color: #fff;
+	position: relative;
+}
+
+.seedling_number {
+	width: 100%;
+	height: 45px;
+	font-size: 14px;
+	color: #333;
+	line-height: 45px;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+	position: absolute;
+	z-index: 1;
+}
+
+.seedling_number h4 {
+	font-size: .327rem;
+	width: 100%;
+	padding: 10px 15px;
+	margin: 0;
+	border: 0;
+	font-weight: 400;
+}
+
+.current-warehouse {
+	z-index: 1;
+	height: 45px;
+	width: 100%;
+	padding: 0 15px;
+	background: #fff;
+}
+
+.current-warehouse .name {
+	float: left;
+	width: 100%;
+	height: 45px;
+	line-height: 45px
+}
+
+.name h3 {
+	color: #333;
+	font-size: .357rem;
+	font-weight: 400;
+	max-width: 80%;
+	float: left;
+}
+
+.onsale-qty {
+	text-align: right;
+	font-size: .327rem;
+	display: inline-block;
+	color: #00ae66;
+	float: none!important;
+	padding-left: 6px;
+}
+
+.warehouse {
+	height: 0;
+	border: 0;
+	overflow: hidden;
+	width: 100%;
+	background: #fff;
+	color: #333;
+	font-size: 14px;
+	line-height: 45px;
+	font-weight: 400;
+	padding: 0 15px
+}
+
+.item li img {
+	width: 2.16rem;
+	height: 2.16rem;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+.item li .detail {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	height: 2.16rem;
+}
+
+.detail .name {
+	color: #333;
+}
+
+.detail p {
+	font-size: .373rem;
+}
+
+.item li .detail p:nth-of-type(2) {
+	color: #666;
+	font-size: .347rem;
+	margin-top: .08rem;
+}
+
+.item li .detail p:nth-of-type(3) {
+	color: #666;
+	font-size: .347rem;
+}
+
+.item li .detail .name strong {
+	font-size: .4rem;
+}
+
+.detail .name i {
+	display: inline-block;
+	border: 1px solid #00ae66;
+	color: #00ae66;
+	border-radius: 2px;
+	margin-left: 10px;
+	line-height: .373rem;
+	vertical-align: middle;
+	height: .373rem;
+	width: .373rem;
+	margin-top: -3px;
+	font-size: .293rem;
+	text-align: center;
+}
+
+.item li .detail p:nth-of-type(4) span {
+	font-size: .32rem;
+	color: #999;
+	display: inline-block;
+	line-height: .36rem;
+	overflow: hidden;
+	max-width: 18em;
+	vertical-align: middle;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	float: none;
+}
+
+.j-pull-anchor {
+	width: 100%;
+	height: 10px;
+	background-color: rgb(239, 239, 244);
+}
+
+.top_gap {
+	width: 100%;
+	height: 5px;
+	background-color: rgb(239, 239, 244);
+}
+
+.company_price {
+	float: left !important;
+}
+
+.company_auth {
+	width: 16px !important;
+	height: 16px !important;
+	display: block;
+	background: #ffb501;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	left: 65px;
+	top: 50px;
+	z-index: 3;
+}
+
+.company_set {
+    width: 100%;
+    max-width: 640px;
+	position: fixed;
+	top: 0px;
+	z-index: 10000;
+}
+
+.company_set_navigation {
+	width: 100%;
+	height: 40px;
+	background: #00ae66;
+}
+
+.top_set_img {
+	width: 10px;
+	height: 20px;
+	margin-left: ;
+}
+
+.company_title {
+	display: inline-block;
+	text-align: center;
+	width: 75%;
+	height: 40px;
+	line-height: 40px;
+	color: #FFFFFF;
+	font-size: 0.36rem;
+}
+
+.home_index {
+	display: inline-block;
+	text-align: center;
+	width: 5%;
+	height: 20px;
+	margin-left: 0.4rem;
+	vertical-align: middle;
+}
+
+.set_search-icon{
+	text-align: center;
+	width: 20%;
+	height: 44px;
+	padding: 0 15px;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.set_search-icon i {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	position: absolute;
+	top: 12px;
+}

@@ -1,0 +1,134 @@
+.map header {
+	height: 45px;
+	width: 100%;
+	background: #33be85;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+    left: 0px;
+    z-index: 10000;
+    right: 0px;
+}
+
+#map_extend {
+	width: 100%;
+	height: 650px;
+}
+
+.map footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 2222;
+	width: 100%;
+	height: 60px;
+	border-top: 1px solid #e5e5e5;
+	background: #fff;
+}
+
+.leftContext2 {
+	float: left;
+	width: 75%;
+	height: 100%;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	word-wrap: break-word
+}
+
+#daohangdiv1 {
+	position: absolute;
+	width:80%;
+	height: 60px;
+	-webkit-user-select: none;
+	left: 10%;
+	top: 45%;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+.leftContext {
+	float: left;
+    width: 75%;
+    height: 60px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    word-wrap: break-word;
+    z-index: 30;
+}
+.rightContext {
+	float: left;
+    width: 20%;
+    height: 60px;
+    padding-top: 5px;
+    padding-right: 5px;
+    word-wrap: break-word;
+    z-index: 30;
+}
+.div1 {
+	 font-size: 12px;
+    color: white;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+}
+.div2{
+	 font-size: 10px;
+    color: white;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+}
+#daohanggao{
+     background: #00ae66;
+    opacity: 1.0;
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+    z-index: 9999;
+    font-size: 12px;
+}
+.div11 {
+	font-size: 12px;
+	color: #333333;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+}
+
+.div22 {
+	font-size: 10px;
+	color: #333333;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+}
+
+.rightContext2 {
+	float: left;
+	width: 20%;
+	height: 100%;
+	vertical-align: top;
+	padding-top: 0px;
+	padding-right: 5px;
+	word-wrap: break-word;
+}
+
+#daohanggao2 {
+	display: inline-block;
+	background: #00ae66;
+	line-height: 40px;
+	text-align: center;
+	width: 94%;
+	margin: 10px 3%;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 4px
+}

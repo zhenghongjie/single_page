@@ -1,0 +1,297 @@
+<template>
+	<div class="company">
+		<section class="header">
+			<div class="company-header-box" :style="note">
+				<div class="navigation">
+					<router-link class="home" to="/">
+						<i>
+							<img src="../img/home.png" alt="" />
+						</i>
+					</router-link>
+					<a class="search-icon" @click="go_detail">
+						<i>
+							<img src="../img/tree_search.png" alt="" />
+						</i>
+					</a>
+				</div>
+				<div class="pic-header">
+					<span class="logo-show" @click="go_see"> 
+						<img :src="companyInfo.company_logo" alt="" > 						
+					</span>
+					<span v-if="companyInfo.has_auth" class="company_auth"><img src="../img/ha_auth.png" alt="" /></span>
+					<p>{{companyInfo.company_name}}</p>
+					<div class="fans-content" id="fans-content">
+						<span class="fans"><em>{{companyInfo.fans_qty}}</em>粉丝</span>
+						<div class="love-btn" @click="save_btn"> 关注 </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="seedling_number-nest">
+			<div class="seedling_number">
+				<h4>在售苗木</h4>
+			</div>
+		</section>
+		<!--<div class="top_gap"></div>-->
+		<!--<div class="current-warehouse">
+			<div class="name">
+				<h3>{{companyInfo.company_name}}</h3>
+				<span class="onsale-qty">{{warehouseDetail.total_cnt}}</span>
+			</div>
+		</div>-->
+		<div class="btn-open1" v-show="show_more" @click="show_list"><span class="on"></span></div>
+		<ul class="item">
+			<li v-for="list in goodslist">
+				<h3 class="current-warehouse" v-if="list.showWare"> 
+	             	<span class="warehouse-name">{{list.warehouse_name}}</span>
+	             	<span class="company_sale">{{list.onsale_seedling_qty}}</span>
+	             </h3>
+				<router-link :to="{name: 'goods', params: { skuNumber: list.sku_number}}">
+					<img v-bind:src="list.main_image">
+					<div class="detail">
+						<p class="name"><strong>{{list.base_name}}</strong><i>{{plant_category(list.plant_category)}}</i></p>
+						<p>{{seedlingDetailsHandler(list.seedling_details)}}</p>
+						<p class="price" v-if='list.price != 0'>
+							<span style="font-size:12px" class="company_price">&yen;</span> {{(list.price*1).toFixed(2) + "元\/" + list.unit_desc}} &nbsp 库存{{list.inventory }}
+						</p>
+						<p class="price" v-if='list.price == 0'> 面议 &nbsp 库存{{list.inventory}}</p>
+						<p><span class="address"> {{list.province_name}} {{list.city_name}}{{list.location}}</span></p>
+					</div>
+				</router-link>
+			</li>
+		</ul>
+		<div class="j-pull-anchor"></div>
+		<div v-show="top_show" class="company_set">
+			<div class="company_set_navigation">
+				<router-link class="home_index" to="/">
+					<img src="../img/home.png" alt="" class="top_set_img" />
+				</router-link>
+				<a class="company_title">{{companyInfo.company_name}}</a>
+				<a class="set_search-icon" @click="go_detail">
+					<i>
+						<img src="../img/tree_search.png" alt="" />
+					</i>
+				</a>
+			</div>
+			<section class="seedling_number-nest">
+				<div class="seedling_number">
+					<h4>在售苗木</h4>
+				</div>
+			</section>
+			<!--<div class="top_gap"></div>
+			<div v-for="list in goodslist" v-if="list.showWare">
+				<h3 class="current-warehouse">
+					<span class="warehouse-name">{{list.warehouse_name}}</span>
+	             	<span class="company_sale">{{list.onsale_seedling_qty}}</span>
+				</h3>
+			</div>-->
+		</div>
+		<div id="warhouse-list" v-show="list_more" @click="hide_list">
+			<div class="blank"></div>
+			<ul class="j-warelist">
+				<li> <div class="name">返回全部在售苗木</div></li>
+				<li v-for="list in goodslist" v-if="list.showWare">
+					<div class="name">
+						 <span class="warehouse-name">{{list.warehouse_name}}</span>
+	             	    <span class="company_sale">{{list.onsale_seedling_qty}}</span>
+					</div>
+				</li>
+			</ul>
+			<div class="btn-open" > <span class="off"></span> </div>
+			<div class="mask"> </div>
+		</div>
+		<div v-show='show_mask'>
+			<div class="weui_mask"></div>
+			<div class="weui_dialog vux-dialog-transition">
+				<div class="weui_dialog_hd"><strong class="weui_dialog_title">通知</strong></div>
+				<div class="weui_dialog_bd">关注功能需要登录 </div>
+				<div class="weui_dialog_ft">
+					<a class="weui_btn_dialog default" @click="hide">取消</a>
+					<a class="weui_btn_dialog primary" @click="go_login">确定</a>
+				</div>
+			</div>
+		</div>
+		<div class="wait_down" v-show="show"><img src="../img/gif.gif" alt="" /></div>
+	</div>
+</template>
+<script>
+	require("../css/company.css");
+	import axios from 'axios';
+	export default {
+		name: "company",
+		data() {
+			return {
+				show_more:false,
+				list_more:false,
+				show_mask: false,
+				show: false,
+				top_show: false,
+				warehouseDetail: [],
+				companyNumber: '', //'YbsT1UYw', //XNMJzuZ7
+				curWareNumber: '',
+				goodslist: [],
+				warehouseNumber: "",
+				warehouse_list: [],			
+				companyInfo: {
+					"company_logo": "",
+					"company_name": "",
+					"fans_qty": 0,
+					"has_auth": false,
+					"has_company": true,
+					"has_warehouse": true,
+					"warehouse_ist": []
+				},
+				requestWareNum:'',
+				warehouse_len:[],
+				page: 1,
+				totalPages: 1,
+				page_size: 20,
+				note: {
+					backgroundImage: "url(" + require("../img/comp_background.jpg") + ")",
+					backgroundRepeat: "no-repeat"
+
+				}
+			}
+		},
+		mounted() {			
+			var _this = this;
+			var postData = this.$route.params;
+			axios.post('http://test.miaocang.cc:12100/api/view_company_info.htm', postData).then(response => {
+				this.companyInfo = response.data.data;
+			}).catch(error => {
+				console.log(error);
+			})
+		},
+		created: function() {
+			 var _this = this;
+				this.reques();
+				
+					console.log(_this.warehouse_len.length);
+				 		     
+			window.addEventListener('scroll', function() {
+				var top = document.body.scrollTop;
+				if(top > 0) {
+					sessionStorage.setItem("offsetTop", top);
+				}
+				if(top > 150) {
+					
+						_this.top_show = true;
+			
+				}
+				if(top < 150) {
+					_this.top_show = false;
+				}
+				if(top > 600 * _this.page) {
+					if(_this.total_page - _this.page < 0) {
+						return;
+					}
+					_this.page++;
+					_this.reques(_this.requestWareNum);
+				
+				if(_this.warehouse_len.length>1){
+					_this.show_more=true
+				}
+  		     
+				}
+			}, 200, 1000);
+		},
+		 activated(){
+              var offset=sessionStorage.getItem("offsetTop");
+             var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+             scrollTop=offset;
+//            alert(offset)
+        },
+		methods: {
+			show_list:function(){
+				this.list_more=true;
+			},
+			hide_list:function(){
+				this.list_more=false;
+			},
+			go_see: function() {
+				this.$router.push({
+					path: '/companyDetail',
+					query: {
+						companyNumber: this.$route.params.companyNumber,
+					}
+				})
+			},
+			go_detail: function() {
+				this.$router.push({
+					path: '/goodslist',
+					query: {
+						companyNumber: this.$route.params.companyNumber,
+					}
+				})
+			},
+			save_btn: function() {
+				this.show_mask = true;
+			},
+			hide: function() {
+				this.show_mask = false;
+			},
+			go_login: function() {
+				this.show_mask = false;
+				this.$router.push("/login");
+			},
+			plant_category: function(plant_category) {
+				var type = {
+					"rongmiao": "容",
+					"yizhi": "移",
+					"dimiao": "地"
+				}
+				return type[plant_category]
+			},
+			reques: function(warehouseNumber) {
+				var _this = this;
+				var postData = {
+					company_number: _this.$route.params.companyNumber,
+					page: _this.page || 1,
+					page_size: _this.page_size || 20,
+					warehouse_number: warehouseNumber ? warehouseNumber : ''
+				};
+				this.show = true; //显示加载中的图标
+				axios.post('http://test.miaocang.cc:12100/api/view_seedling_company.htm', postData)
+					.then(response => {
+						console.log(response);
+						_this.warehouseDetail = response.data.data;
+						_this.total_page = _this.warehouseDetail.page;
+						var cache = _this.goodslist.concat(response.data.data.seedings);
+						_this.goodslist = cache;					
+						this.show = false; //隐藏加载中的图标
+						_this.goodslist.map(function(ele) {
+							ele['seedling_details'] = ele.details;
+						}, this);							
+						//显示产品列表苗场
+						for(var si = 0; si < _this.goodslist.length; si++) {
+							var firstItemIndexOfWare = si + postData.page_size * (postData.page - 1);
+							if(_this.goodslist[si].warehouse_number != _this.curWareNumber) {
+								_this.curWareNumber = _this.goodslist[si].warehouse_number;
+								_this.warehouse_len.push(_this.curWareNumber);
+								console.log(_this.warehouse_len.length);
+								if(_this.warehouse_len.length>1){
+					                 _this.show_more=true
+				                 }
+								_this.goodslist[firstItemIndexOfWare].showWare = true;
+							} else {
+								_this.goodslist[firstItemIndexOfWare].showWare = false;
+							}
+						}												
+					}).catch(error => {
+						console.log(error);
+					})
+			      },
+			seedlingDetailsHandler(arr){
+				var str = ''
+				arr.map(item => {
+					var name = item.name;
+					if(name.length > 0) {
+						name = name.substring(0, 1);
+					}
+					str += name + '' + (item.value_begin || '') + '-' + (item.value_end || '') + item.unit + ' ';
+				})
+				return str;
+			},			
+		},
+	}
+</script>

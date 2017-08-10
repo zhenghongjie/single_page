@@ -1,0 +1,67 @@
+#businessDetail header {
+    height: 90px;
+    width: 100%;
+    background: #00ae66;
+    color: #fff;
+    padding-top: 10px;
+}
+#businessDetail header h3 {
+    text-align: center;
+    font-size: 20px;
+}
+#businessDetail header ul {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+#businessDetail header ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #008b52;
+    color: #28b179;
+    font-size: 16px;
+}
+#businessDetail header ul li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#businessDetail header ul li.active {
+    background: #fff;
+    color: #008b52;
+}
+#businessDetail header ul li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#businessDetail section {
+    padding: 20px;
+}
+#businessDetail section li {
+    height: 35px;
+    display: flex;
+}
+#businessDetail section li span {
+    flex: 2;
+    color: #bababa;
+}
+#businessDetail section li span, #businessDetail section li strong {
+    font-size: .373rem;
+}
+#businessDetail section li strong {
+    flex: 4;
+    font-weight: 400;
+}
+#businessDetail section .result {
+    background: #ffc;
+    color: #f90;
+    height: 40px;
+    line-height: 40px;
+    text-indent: 2em;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

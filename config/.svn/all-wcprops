@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/config
+END
+dev.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/config/dev.env.js
+END
+test.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/config/test.env.js
+END
+index.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/config/index.js
+END
+prod.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/config/prod.env.js
+END

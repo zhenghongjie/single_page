@@ -1,0 +1,131 @@
+@import 'common.css';
+.login-header {
+    width: 100%;
+    height: 1.2rem;
+    background: #00ae66;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.login section {
+    width: 100%;
+    overflow-x: hidden!important;
+}
+.login .input-group:first-of-type {
+    margin-top: .56rem;
+    border-bottom: none;
+}
+.input-group {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    height: 1.333rem;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: bolder;
+}
+ .input-group label {
+    display: inline-block;
+    text-align: center;
+    width: 1.333rem;
+    line-height: 1.333rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.input-group input {
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+    font-size: 14px;
+}
+.login {
+    background: #efeff4!important;
+    height: 736px!important;
+    width: 100%!important;
+    overflow: hidden;
+}
+#login-btn button {
+    height: 1.2rem;
+    width: 90%;
+    margin-left: 5%;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #fff;
+    margin-top: .56rem;
+    margin-bottom: .56rem;
+    border-radius: 2px;
+    font-size: 16px;
+}
+#login-btn span {
+    float: right;
+    margin-right: 5%;
+    height: 30px;
+}
+.no-account {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+}
+.no-account button {
+    border: 1px solid #00ae66;
+    width: 2.133rem;
+    line-height: .667rem;
+    text-align: center;
+    background: #fff;
+    color: #00ae66;
+    border-radius: 2px;
+    font-size: .32rem;
+}
+.login #remember{
+    padding: .3rem 0  0 .5rem;
+    size:15px;
+}
+.login #remember input {
+    height:16px;
+    width:16px;
+    vertical-align:middle;
+}
+.login #remember label{
+    font-size: 15px;
+    vertical-align:middle;
+}
+.notable{
+    background: #dcdde6;
+    color: #999 !important;
+}
+.canable{
+	    background: #00ae66;
+	    color: #FFFFFF;	
+}
+ .seccode_active{
+    border-left: 1px solid #ccc;
+    font-size: 12px;
+      color: #666;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+.register_dalog{width: 65%;}
+.seccode_input{flex:4 !important;}
+.login_btn{
+	background: #00ae66;
+}
+.erro_dialog,.login_dialog{width: 80% !important;    position: fixed;
+    z-index: 13;
+    width: 85%;
+    top: 40%;
+    left:11%;
+    background-color: #fafafc;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+}
+#remember #isinput {
+    margin-left: 30px;
+    color: red;
+}

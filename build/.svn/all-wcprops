@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build
+END
+vue-loader.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/vue-loader.conf.js
+END
+webpack.base.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/webpack.base.conf.js
+END
+dev-client.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/dev-client.js
+END
+webpack.dev.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/webpack.dev.conf.js
+END
+webpack.test.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/webpack.test.conf.js
+END
+build.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/build.js
+END
+utils.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/utils.js
+END
+dev-server.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/dev-server.js
+END
+check-versions.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/check-versions.js
+END
+webpack.prod.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/build/webpack.prod.conf.js
+END

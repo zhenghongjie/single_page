@@ -1,0 +1,165 @@
+@import 'common.css';
+.search-box {
+	position: relative;
+}
+
+.search-area {
+	position: absolute;
+	left: .32rem;
+	bottom: .533rem;
+	right: .32rem;
+	z-index: 2;
+	border-radius: 5px;
+}
+
+.search-inp {
+	color: #cacaca;
+	line-height: 1.093rem;
+	width: 100%;
+	padding-left: 1.387rem;
+	font-size: .427rem;
+	line-height: 1.2em;
+	background: #fff;
+	display: inline-block;
+	border: 1px solid #eee;
+	height: 1.093rem;
+	float: left;
+	border-radius: .133rem;
+	color: #cacaca;
+	border: none;
+}
+
+.search-pic {
+	background-size: 45% 45%;
+	background-position: 50%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1.093rem;
+	height: 1.093rem;
+	padding-top: 3%;
+	padding-left: 3%;
+}
+
+.search-pic {
+	width: 1.093rem;
+    height: 1.093rem
+}
+.sear-icon{width: 60%;height: 60%;}
+.hot-tree {
+	height: .88rem;
+	width: 100%;
+	line-height: .88rem;
+	padding-left: 15px;
+	color: #666;
+	font-size: 0.4rem;
+}
+
+.item {
+	background: #fff;
+	width: 100%
+}
+
+.item li {
+	width: 100%;
+	margin: 0px !important;
+}
+
+.item li a {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	height: 2.533rem;
+	width: 100%;
+	border-top: 1px solid #e5e5e5;
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+.tree-pic {
+	width: 2.16rem;
+	height: 2.16rem;
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+.item li .detail {
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	height: 2.16rem;
+}
+
+.item li .detail .name {
+	color: #333;
+}
+
+.item li .detail p {
+	font-size: .373rem;
+}
+
+.item li .detail p:nth-of-type(2) {
+	color: #666;
+	font-size: .347rem;
+	margin-top: .08rem;
+}
+
+.item li .detail p:nth-of-type(3) {
+	color: #666;
+	font-size: .347rem;
+}
+
+.item li .detail p {
+	font-size: .373rem;
+}
+
+.item li .detail .name i {
+	display: inline-block;
+	border: 1px solid #00ae66;
+	color: #00ae66;
+	border-radius: 2px;
+	margin-left: 10px;
+	line-height: .373rem;
+	vertical-align: middle;
+	height: .373rem;
+	width: .373rem;
+	margin-top: -3px;
+	font-size: .293rem;
+	text-align: center;
+}
+
+.item li .detail .address {
+	float: right;
+	display: inline-block;
+	position: relative;
+	font-size: .32rem;
+	color: #999;
+}
+
+.address-icon {
+	position: absolute;
+	left: -.533rem;
+	top: .027rem;
+	width: .32rem;
+	height: 100%;
+}
+
+.address-pic {
+	width: .32rem !important;
+	height: 100% !important;
+}
+
+.company {
+	color: #999;
+}
+	
+	.wait_down {
+		position: fixed;
+		margin: 0 auto;
+		z-index: 1000;
+		top: 50%;
+	}

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/test/unit
+END
+.eslintrc
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/test/unit/.eslintrc
+END
+index.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/test/unit/index.js
+END
+karma.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/miaocangh5-v2/!svn/ver/3/trunk/my-test/test/unit/karma.conf.js
+END
